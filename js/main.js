@@ -1,5 +1,5 @@
 var soldatino = true;
-while (true) {
+while (soldatino) {
   var livello = prompt("0=difficoltà 0, 1=difficoltà 1, 2=difficoltà 2");
   switch (livello) {
     case  '0':
@@ -7,11 +7,10 @@ while (true) {
     var safezone = [];
     var massimo = 100;
     console.log(numeribomba(bombzone, 100));
-    var punteggio = (gioco(bombzone, safezone, massimo));
+    var punteggio = ("Il tuo punteggio è: " + gioco(bombzone, safezone, massimo));
     console.log(punteggio);
-    var soldatino = false;
+    soldatino = false;
     break;
-
     case  '1':
     var bombzone =[];
     var safezone = [];
@@ -19,7 +18,7 @@ while (true) {
     console.log(numeribomba(bombzone, 80));
     var punteggio = (gioco(bombzone, safezone, massimo));
     console.log(punteggio);
-    var soldatino = false;
+    soldatino = false;
     break;
 
     case  '2':
@@ -29,10 +28,14 @@ while (true) {
     console.log(numeribomba(bombzone, 50));
     var punteggio = (gioco(bombzone, safezone, massimo));
     console.log(punteggio);
-    var soldatino = false;
+    soldatino = false;
+    break;
+    default:
+    soldatino = true;
     break;
   }
-  break;
+
+
 }
 
 function numeribomba(bombas, max) {
